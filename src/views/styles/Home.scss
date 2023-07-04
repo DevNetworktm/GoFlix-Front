@@ -1,0 +1,24 @@
+.home {
+  min-height: calc(100vh - 75px);
+  padding-bottom: 50px;
+  padding-top: 50px;
+
+  & > #movies {
+    width: 90%;
+    height: calc(100% - 70px);
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 300px));
+
+    gap: 50px;
+
+    @media screen and (max-width: 600px) {
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.home-loader {
+  height: calc(100vh - 70px);
+}

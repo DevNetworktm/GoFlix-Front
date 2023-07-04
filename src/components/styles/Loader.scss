@@ -1,0 +1,57 @@
+.dots-loading {
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  gap: 20px;
+
+  & > div {
+    display: inline-block;
+    border-radius: 100%;
+    background-color: #b4b4b4;
+    opacity: 0;
+
+    &.first {
+      -moz-animation: opacitychange 1s ease-in-out infinite;
+      -webkit-animation: opacitychange 1s ease-in-out infinite;
+      -o-animation: opacitychange 1s ease-in-out infinite;
+      animation: opacitychange 1s ease-in-out infinite;
+    }
+
+    &.second {
+      -moz-animation: opacitychange 1s ease-in-out 0.33s infinite;
+      -webkit-animation: opacitychange 1s ease-in-out 0.33s infinite;
+      -o-animation: opacitychange 1s ease-in-out 0.33s infinite;
+      animation: opacitychange 1s ease-in-out 0.33s infinite;
+    }
+
+    &.three {
+      -moz-animation: opacitychange 1s ease-in-out 0.70s infinite;
+      -webkit-animation: opacitychange 1s ease-in-out 0.70s infinite;
+      -o-animation: opacitychange 1s ease-in-out 0.70s infinite;
+      animation: opacitychange 1s ease-in-out 0.70s infinite;
+    }
+  }
+
+
+  @keyframes opacitychange {
+    0%,
+    100% {
+      opacity: 0;
+    }
+
+    60% {
+      opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes opacitychange {
+    0%,
+    100% {
+      opacity: 0;
+    }
+
+    60% {
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,114 @@
+.movie-loader {
+  height: calc(100vh - 70px);
+}
+
+a.wiki {
+  color: black;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.movie {
+  position: relative;
+  width: 100%;
+  display: flex;
+
+  & > .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: calc(100vh - 70px);
+
+    max-height: calc(100vh - 70px);
+
+    & > img {
+      width: 500px;
+    }
+  }
+
+  & > .info {
+    padding-top: 50px;
+    width: 100%;
+    min-height: calc(100vh - 70px);
+
+    & > h1 {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      padding-bottom: 15px;
+
+      font-weight: normal;
+    }
+
+    & > h3, & > h4, & > h6, & > p {
+      padding-bottom: 10px;
+      font-size: 15px;
+      font-weight: normal;
+
+      max-width: 90%;
+    }
+
+    & > p.release_date > span {
+      color: #838383;
+      font-style: italic;
+      margin-left: 15px;
+    }
+
+    & > .content_trailer {
+      margin-top: 50px;
+
+      height: 450px;
+
+      display: flex;
+      justify-content: start;
+      align-items: center;
+
+      & > iframe {
+        width: 90%;
+      }
+    }
+
+  }
+
+
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+
+    & > .image {
+      margin-top: 25px;
+      height: auto;
+      min-height: auto;
+
+      & > img {
+        width: 90%;
+      }
+    }
+
+
+    & > .info {
+
+      height: auto;
+      min-height: auto;
+      margin-bottom: 50px;
+
+      & > h1, & > h3, & > h4, & > h6, & > p {
+        padding-left: 20px;
+      }
+
+      & > .content_trailer {
+        margin-top: 10px;
+
+        height: auto;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & > iframe {
+          width: 90%;
+        }
+      }
+    }
+
+  }
+}
